@@ -7,14 +7,17 @@
 
 import Foundation
 
+
+
 class Helper {
-    private var numbers: [Int] = []
     
-    func addNumber(_ number: Int) {
-        numbers.append(number)
+    private var people: [String] = []
+    
+    func addPeoples(name: String, secondName: String) {
+        people.append(name)
     }
-    func getNumbers() -> [Int] {
-        numbers
+    func getPeople() -> [String] {
+        people
     }
     
 }

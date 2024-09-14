@@ -9,8 +9,13 @@ import Foundation
 
 class Person  {
     
-    let name = "Sergey"
-    let secondName = "Ustinov"
+    let name: String
+    let secondName: String
+    
+    init(name: String, secondName: String) {
+        self.name = name
+        self.secondName = secondName
+    }
     
     var fullName: String {
         name + secondName
