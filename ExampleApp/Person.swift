@@ -7,21 +7,23 @@
 
 import Foundation
 
-class Person  {
+struct Person  {
+}
+struct User {
+    var name: String
+    var secondName: String
+    var login: String
+    var password: String
+}
     
-    let name: String
-    let secondName: String
+    var user = User (
+        name: "Mike",
+        secondName: "Brown",
+        login: "mike23",
+        password: "qwerty2")
     
-    init(name: String, secondName: String) {
-        self.name = name
-        self.secondName = secondName
-    }
-    
-    var fullName: String {
-        name + secondName
-    }
 
      func viewDidLoad() {
-        print(fullName)
+        print(user)
     }
-}
+

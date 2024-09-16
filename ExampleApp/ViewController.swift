@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        helper.addPeoples(name: "Mike", secondName: "Brown")
-        helper.addPeoples(name: "Linda", secondName: "Price")
+        helper.addPeoples(User(name: "Mike", secondName: "Brown", login: "mike23", password: "qwerty2"))
         print(helper.getPeople())
       
        

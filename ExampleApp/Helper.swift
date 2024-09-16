@@ -11,12 +11,12 @@ import Foundation
 
 class Helper {
     
-    private var people: [String] = []
+    private var people: [User] = []
     
-    func addPeoples(name: String, secondName: String) {
-        people.append(name)
+    func addPeoples(_ user: User) {
+        people.append(user)
     }
-    func getPeople() -> [String] {
+    func getPeople() -> [User] {
         people
     }
     
