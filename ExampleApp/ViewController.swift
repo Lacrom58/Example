@@ -14,10 +14,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        helper.addPeoples(User(name: "Mike", secondName: "Brown", login: "mike23", password: "qwerty2"))
-        print(helper.getPeople())
+        
+        for helper in helper.getPeople() {
+           print(helper.person) 
+        }
+        
+     
+            
+        }
       
        
     }
-}
+
 

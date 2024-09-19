@@ -8,15 +8,13 @@
 import Foundation
 
 struct Person  {
-}
-struct User {
     var name: String
     var secondName: String
     var login: String
     var password: String
-}
     
-    var user = User (
+}
+    var person = Person (
         name: "Mike",
         secondName: "Brown",
         login: "mike23",
@@ -24,6 +22,13 @@ struct User {
     
 
      func viewDidLoad() {
-        print(user)
+        print(person)
+}
+struct User {
+    let person: Person
+    
+    
     }
+    
+
 
