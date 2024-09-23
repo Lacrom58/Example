@@ -19,5 +19,13 @@ class Helper {
     func getPeople() -> [User] {
         people
     }
+    func addMorePeoples(_ user: [User]) {
+        for person in user {
+            print(person.person)
+        }
+            
+        }
+        
+    }
     
-}
+
