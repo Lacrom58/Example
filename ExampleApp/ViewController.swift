@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     private let repository = UserRepository()
     private let textLabel = UILabel()
     private let button: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setTitle("Show FullName", for: .normal)
         button.backgroundColor = .green
         button.frame = CGRect(x: 100, y: 150, width: 150, height: 50)
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .purple
         
         setupLabel()
-        view.addSubview(textLabel)
+        view.addSubview(button)
         
         helper.addMorePeoples(repository.getPeople())
       
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     private func setupLabel(){
         let fullName = helper.getPeople().randomElement()
         textLabel.text = fullName?.person.fullName
-        textLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        textLabel.font = .systemFont(ofSize: 25)
         textLabel.textColor = .blue
         textLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     }
