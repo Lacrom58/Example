@@ -24,8 +24,8 @@ class Helper {
             print(person.person)
         }
             
-        }
-        
     }
+        
+}
     
 
