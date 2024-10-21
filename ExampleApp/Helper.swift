@@ -21,11 +21,11 @@ class Helper {
     }
     func addMorePeoples(_ user: [User]) {
         for person in user {
-            print(person.person)
-        }
+            people.append(person)
             
-    }
+        }
         
+    }
 }
-    
+
 
