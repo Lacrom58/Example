@@ -12,17 +12,17 @@ class ViewController: UIViewController {
     private let helper = Helper()
     private let repository = UserRepository()
     private let textLabel = UILabel()
-    private let button = UIButton()
+    private let button = CustomButton(buttonName: "Show new User", color: .red, needShadow: false)
+    private let secondButton = CustomButton(buttonName: "Hide user", color: .green, needShadow: true)
     private let stackView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
+        view.backgroundColor = .darkGray
         
         helper.addMorePeoples(repository.getPeople())
         
         setupLabel()
-        setupButton()
         setupStackView()
         view.addSubview(stackView)
         setupLayout()
@@ -42,17 +42,11 @@ class ViewController: UIViewController {
         let fullName = helper.getPeople().randomElement()
         textLabel.text = fullName?.person.fullName
         textLabel.font = .systemFont(ofSize: 25)
-        textLabel.textColor = .blue
+        textLabel.textColor = .white
         textLabel.textAlignment = .center
-        textLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     }
     
-    private func setupButton() {
-        let button = UIButton(type: .system)
-        button.setTitle("Show FullName", for: .normal)
-        button.backgroundColor = .green
-        button.frame = CGRect(x: 100, y: 150, width: 150, height: 50)
-    }
+  
     
     private func setupStackView() {
         stackView.axis = .vertical
@@ -62,26 +56,19 @@ class ViewController: UIViewController {
         
         stackView.addArrangedSubview(textLabel)
         stackView.addArrangedSubview(button)
+        stackView.addArrangedSubview(secondButton)
     }
     
     private func setupLayout() {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        button.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stackView.widthAnchor.constraint(equalToConstant: 200),
-            stackView.heightAnchor.constraint(equalToConstant: 400),
-            
-            button.topAnchor.constraint(equalTo: button.topAnchor),
-            button.bottomAnchor.constraint(equalTo: button.bottomAnchor),
-            button.leadingAnchor.constraint(equalTo: button.trailingAnchor),
-            button.trailingAnchor.constraint(equalTo: button.trailingAnchor),
-            
-        
+            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+            stackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8),
+
         ])
     }
     

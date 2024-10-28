@@ -15,6 +15,7 @@
 		62A2563D2CA16669007E095F /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A2563C2CA16669007E095F /* UserRepository.swift */; };
 		62ADE2242C956E1800B172BC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ADE2232C956E1800B172BC /* Helper.swift */; };
 		62ADE2282C95776200B172BC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ADE2272C95776200B172BC /* Person.swift */; };
+		62E449172CCF943000FE0F5A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E449162CCF943000FE0F5A /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		62A2563C2CA16669007E095F /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		62ADE2232C956E1800B172BC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		62ADE2272C95776200B172BC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		62E449162CCF943000FE0F5A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				62510D592C90BE2B00FD314E /* AppDelegate.swift */,
 				62510D5B2C90BE2B00FD314E /* SceneDelegate.swift */,
 				62510D5D2C90BE2B00FD314E /* ViewController.swift */,
+				62E449162CCF943000FE0F5A /* CustomButton.swift */,
 				62A2563C2CA16669007E095F /* UserRepository.swift */,
 				62ADE2272C95776200B172BC /* Person.swift */,
 				62ADE2232C956E1800B172BC /* Helper.swift */,
@@ -147,6 +150,7 @@
 				62510D5E2C90BE2B00FD314E /* ViewController.swift in Sources */,
 				62A2563D2CA16669007E095F /* UserRepository.swift in Sources */,
 				62510D5A2C90BE2B00FD314E /* AppDelegate.swift in Sources */,
+				62E449172CCF943000FE0F5A /* CustomButton.swift in Sources */,
 				62510D5C2C90BE2B00FD314E /* SceneDelegate.swift in Sources */,
 				62ADE2242C956E1800B172BC /* Helper.swift in Sources */,
 			);
