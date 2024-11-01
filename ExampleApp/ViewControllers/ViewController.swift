@@ -23,21 +23,21 @@ class ViewController: UIViewController {
         helper.addMorePeoples(repository.getPeople())
         
         setupLabel()
-        setupStackView()
-        view.addSubview(stackView)
+        setupStackView(textLabel, button, secondButton)
+        view.addSubViews(stackView)
         setupLayout()
-        
-        
-        
-        
+
         for helper in helper.getPeople() {
             print(helper.person.fullName)
-            
-            
+ 
         }
  
     }
-    
+
+}
+
+// MARK: Label
+extension ViewController {
     private func setupLabel(){
         let fullName = helper.getPeople().randomElement()
         textLabel.text = fullName?.person.fullName
@@ -45,20 +45,10 @@ class ViewController: UIViewController {
         textLabel.textColor = .white
         textLabel.textAlignment = .center
     }
-    
-  
-    
-    private func setupStackView() {
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.spacing = 10
-        
-        stackView.addArrangedSubview(textLabel)
-        stackView.addArrangedSubview(button)
-        stackView.addArrangedSubview(secondButton)
-    }
-    
+}
+
+// MARK: Constraints
+extension ViewController {
     private func setupLayout() {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -71,10 +61,25 @@ class ViewController: UIViewController {
 
         ])
     }
-    
 }
-    
 
+// MARK: Stack View
+extension ViewController {
+    private func setupStackView(_ views: UIView...) {
+        
+        for view in views {
+            stackView.addArrangedSubview(view)
+        }
+        
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 10
+
+    }
+}
+
+    
 
 
 

@@ -16,23 +16,16 @@ class CustomButton: UIButton {
         setupButton(buttonName, color, needShadow)
         setupLayout()
     }
+    
     @available(*, deprecated)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private func setupButton(_ buttonName: String, _ color: UIColor, _ needShadow: Bool) {
-        button.setTitle(buttonName, for: .normal)
-        button.backgroundColor = color 
-        button.layer.cornerRadius = 20
-        if needShadow {
-            button.layer.shadowOpacity = 0.8
-        }
-        addSubview(button)
-    }
-    
-   
-    
+
+}
+
+// MARK: Constraints Button
+extension CustomButton {
     private func setupLayout() {
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -43,5 +36,18 @@ class CustomButton: UIButton {
             button.leadingAnchor.constraint(equalTo: leadingAnchor)
         
         ])
+    }
+}
+
+// MARK: Button
+extension CustomButton {
+    private func setupButton(_ buttonName: String, _ color: UIColor, _ needShadow: Bool) {
+        button.setTitle(buttonName, for: .normal)
+        button.backgroundColor = color
+        button.layer.cornerRadius = 20
+        if needShadow {
+            button.layer.shadowOpacity = 0.8
+        }
+        addSubview(button)
     }
 }
