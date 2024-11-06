@@ -19,12 +19,15 @@ class Helper {
     func getPeople() -> [User] {
         people
     }
+    func showRandomUser() -> User? {
+        people.randomElement() 
+    }
+    
     func addMorePeoples(_ user: [User]) {
         for person in user {
             people.append(person)
             
         }
-        
     }
 }
 
